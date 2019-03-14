@@ -9,9 +9,6 @@ public class Time extends Module {
     // A String array holding the modifiers to runModule
     private String[] modifierStrings;
 
-    // 
-    private boolean responseCalled;
-
     // The current time
     private String time;
 
@@ -19,8 +16,6 @@ public class Time extends Module {
      * Sets time to the current time and calls response
      */
     public void runModule(String input) {
-        responseCalled = false;
-
         modifierStrings = parseInput(input);
 
         time = "" + LocalDateTime.now();
@@ -54,9 +49,5 @@ public class Time extends Module {
         }
 
         System.out.println("It is " + hour + ":" + minute + " " + meridiem + ".");
-    }
-
-    public boolean getResponseCalled() {
-        return responseCalled;
     }
 }

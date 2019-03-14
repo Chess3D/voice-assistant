@@ -7,12 +7,7 @@ public class Calendar extends Module {
     // A String array holding the modifiers to runModule
     private String[] modifierStrings;
 
-    // 
-    private boolean responseCalled;
-
     public void runModule(String input) {
-        responseCalled = false;
-
         modifierStrings = parseInput(input);
 
         
@@ -26,11 +21,6 @@ public class Calendar extends Module {
     }
 
     public void response() {
-        responseCalled = true;
         System.out.println("Response called for Calendar");
-    }
-
-    public boolean getResponseCalled() {
-        return responseCalled;
     }
 }
