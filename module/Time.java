@@ -7,20 +7,31 @@ import zer0.template.Module;
 public class Time extends Module {
 
     // A String array holding the modifiers to runModule
-    String[] modifierStrings;
+    private String[] modifierStrings;
+
+    // 
+    private boolean responseCalled;
 
     // The current time
-    String time;
+    private String time;
 
     /**
      * Sets time to the current time and calls response
      */
     public void runModule(String input) {
+        responseCalled = false;
+
         modifierStrings = parseInput(input);
 
         time = "" + LocalDateTime.now();
 
         response();
+
+        long startTime = System.nanoTime();
+        long end = 1000000000;
+        while(System.nanoTime() - startTime < end);
+        while(System.nanoTime() - startTime < end);
+        while(System.nanoTime() - startTime < end);
     }
 
     public String[] parseInput(String input) {
@@ -43,5 +54,9 @@ public class Time extends Module {
         }
 
         System.out.println("It is " + hour + ":" + minute + " " + meridiem + ".");
+    }
+
+    public boolean getResponseCalled() {
+        return responseCalled;
     }
 }

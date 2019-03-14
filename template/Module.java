@@ -17,4 +17,6 @@ public abstract class Module {
      * @return The response zer0 gives when the action is preformed
      */
     public abstract void response();
+
+    public abstract boolean getResponseCalled();
 }

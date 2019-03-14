@@ -5,9 +5,14 @@ import zer0.template.Module;
 public class Calendar extends Module {
 
     // A String array holding the modifiers to runModule
-    String[] modifierStrings;
+    private String[] modifierStrings;
+
+    // 
+    private boolean responseCalled;
 
     public void runModule(String input) {
+        responseCalled = false;
+
         modifierStrings = parseInput(input);
 
         
@@ -21,6 +26,11 @@ public class Calendar extends Module {
     }
 
     public void response() {
-        System.out.println("runModule called for Calendar");
+        responseCalled = true;
+        System.out.println("Response called for Calendar");
+    }
+
+    public boolean getResponseCalled() {
+        return responseCalled;
     }
 }

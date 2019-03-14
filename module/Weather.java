@@ -5,12 +5,15 @@ import zer0.template.Module;
 public class Weather extends Module {
 
     // A String array holding the modifiers to runModule
-    String[] modifierStrings;
+    private String[] modifierStrings;
+
+    //
+    private boolean responseCalled;
 
     public void runModule(String input) {
-        modifierStrings = parseInput(input);
+        responseCalled = false;
 
-        
+        modifierStrings = parseInput(input);
 
         response();
     }
@@ -28,6 +31,11 @@ public class Weather extends Module {
     }
 
     public void response() {
+        responseCalled = true;
+        System.out.println("Response called for Weather");
+    }
 
+    public boolean getResponseCalled() {
+        return responseCalled;
     }
 }
