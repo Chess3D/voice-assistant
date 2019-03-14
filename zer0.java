@@ -16,6 +16,6 @@ public class zer0 {
         moduleRegistration.registerModules();
 
         // Attempts to call a module using the given input
-        moduleProcessor.callModule("What is on my calendar?");
+        moduleProcessor.callModule("What time is it?");
     }
 }

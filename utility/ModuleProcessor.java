@@ -34,7 +34,7 @@ public class ModuleProcessor {
     public void callModule(String input) {
         for(String key : keywords) {
             if(input.toLowerCase().indexOf(key) != -1) {
-                System.out.println("Found call to " + key + " module");
+                System.out.println("Calling " + key + " module");
                 registeredModules.get(key).runModule(input);
                 return;
             }
