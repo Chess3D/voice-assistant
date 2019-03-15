@@ -21,12 +21,6 @@ public class Time extends Module {
         time = "" + LocalDateTime.now();
 
         response();
-
-        long startTime = System.nanoTime();
-        long end = 1000000000;
-        while(System.nanoTime() - startTime < end);
-        while(System.nanoTime() - startTime < end);
-        while(System.nanoTime() - startTime < end);
     }
 
     public String[] parseInput(String input) {
