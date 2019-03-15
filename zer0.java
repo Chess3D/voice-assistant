@@ -39,8 +39,6 @@ public class zer0 {
             // Cuts off everything spoken before the key phrase 
             input = input.toLowerCase().substring(input.toLowerCase().lastIndexOf(keyPhrase.toLowerCase()));
 
-            System.out.println(input);
-
             // Attempts to call a module using the given input
             moduleProcessor.callModule(input);
         }
