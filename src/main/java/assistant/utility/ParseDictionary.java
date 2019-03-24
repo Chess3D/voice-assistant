@@ -1,4 +1,4 @@
-package zer0.utility;
+package assistant.utility;
 
 public class ParseDictionary {
     

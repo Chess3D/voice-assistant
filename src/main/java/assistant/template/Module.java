@@ -1,4 +1,4 @@
-package zer0.template;
+package assistant.template;
 
 public abstract class Module {
 
@@ -14,7 +14,7 @@ public abstract class Module {
 	public abstract String[] parseInput(String inputString);
 
     /**
-     * @return The response zer0 gives when the action is preformed
+     * @return The response Q gives when the action is preformed
      */
     public abstract void response();
 }

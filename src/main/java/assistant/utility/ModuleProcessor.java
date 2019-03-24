@@ -1,6 +1,6 @@
-package zer0.utility;
+package assistant.utility;
 
-import zer0.template.Module;
+import assistant.template.Module;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -35,7 +35,7 @@ public class ModuleProcessor {
      * Searches through the input, calling a module if the input contains its keyword,
      * and stops searching once a valid module is found
      */
-    public void callModule(String input) {
+    public boolean callModule(String input) {
         
         // Cycles through every module's keyword
         for(String key : keywords) {
@@ -49,8 +49,10 @@ public class ModuleProcessor {
                 });
 
                 // Exits the class to prevent multiple calls for the same input
-                return;
+                return true;
             }
         }
+
+        return false;
     }
 }

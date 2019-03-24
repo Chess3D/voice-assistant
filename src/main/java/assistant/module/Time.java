@@ -1,8 +1,8 @@
-package zer0.module;
+package assistant.module;
 
 import java.time.LocalDateTime;
 
-import zer0.template.Module;
+import assistant.template.Module;
 
 public class Time extends Module {
 

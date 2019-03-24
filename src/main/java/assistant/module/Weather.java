@@ -1,6 +1,6 @@
-package zer0.module;
+package assistant.module;
 
-import zer0.template.Module;
+import assistant.template.Module;
 
 public class Weather extends Module {
 

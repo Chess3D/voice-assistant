@@ -1,6 +1,6 @@
-package zer0.utility;
+package assistant.utility;
 
-import zer0.module.*;
+import assistant.module.*;
 
 public class ModuleRegistration {
 
