@@ -37,9 +37,12 @@ dependencies {
     testImplementation 'org.spockframework:spock-core:1.2-groovy-2.5'
     testImplementation 'junit:junit:4.12'
 
-    // Use sphinx4 text to speech
+    // Use sphinx4 for speech to text
     compile group: 'edu.cmu.sphinx', name: 'sphinx4-core', version:'5prealpha-SNAPSHOT'
     compile group: 'edu.cmu.sphinx', name: 'sphinx4-data', version:'5prealpha-SNAPSHOT'
+
+    // Use Mary for text to speech
+    compile group: 'de.dfki.mary', name: 'voice-cmu-slt-hsmm', version: '5.2'
 }
 
 // Define the main class for the application

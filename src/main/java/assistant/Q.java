@@ -17,14 +17,14 @@ public class Q {
         // Registers the modules found in ModuleRegistration
         moduleRegistration.registerModules();
 
-        // C
+        // Implements the SpeechToText class
         SpeechToText speechToText = new SpeechToText();
 
         // Name of the voice assistant
         String name = "Q";
 
         // Phrase required for the voice assistant to preform an action
-        String keyPhrase = name;
+        String keyPhrase = "Hey " + name;
 
         // Holds the voice input received by the voice assistant
         String input;
@@ -39,19 +39,16 @@ public class Q {
             input = "";
 
             // Continues to update input until the key phrase is spoken
-            while(input.toLowerCase().indexOf(keyPhrase.toLowerCase()) == -1) {
+            while(input.indexOf(keyPhrase.toLowerCase()) == -1) {
                 input = speechToText.getResults();
                 System.out.println(input);
             }
 
             // Cuts off everything spoken before the key phrase 
-            input = input.toLowerCase().substring(input.toLowerCase().lastIndexOf(keyPhrase.toLowerCase()));
+            input = input.substring(input.lastIndexOf(keyPhrase.toLowerCase()));
 
-            // Attempts to call a module until a module is called
-            while(!moduleProcessor.callModule(input)) {
-                input = speechToText.getResults();
-                System.out.println(input);
-            }
+            // Attempts to call a module with the given input
+            moduleProcessor.callModule(input);
         }
     }
 }

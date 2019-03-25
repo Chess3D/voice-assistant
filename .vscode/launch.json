@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - TextToSpeech",
+            "request": "launch",
+            "mainClass": "assistant.template.TextToSpeech",
+            "projectName": "Q"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - App",
             "request": "launch",
             "mainClass": "assistant.Q",

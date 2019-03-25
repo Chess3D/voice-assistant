@@ -42,6 +42,6 @@ public class Time extends Module {
             meridiem = "AM";
         }
 
-        System.out.println("It is " + hour + ":" + minute + " " + meridiem + ".");
+        System.out.println("It's " + hour + ":" + minute + " " + meridiem);
     }
 }
