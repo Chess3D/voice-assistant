@@ -14,10 +14,7 @@ public class Weather extends Module {
     }
 
     /**
-     * Modifiers
-     * 0:Time
-     * 1:State/Country
-     * 2:City
+     * Modifiers 0:Time 1:State/Country 2:City
      */
     public String[] parseInput(String input) {
         String[] modifiers = new String[3];
@@ -26,6 +23,5 @@ public class Weather extends Module {
     }
 
     public void response() {
-        System.out.println("Response called for Weather");
     }
 }

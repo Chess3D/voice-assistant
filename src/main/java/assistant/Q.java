@@ -47,8 +47,15 @@ public class Q {
             // Cuts off everything spoken before the key phrase 
             input = input.substring(input.lastIndexOf(keyPhrase.toLowerCase()));
 
+            // The time the key phrase was spoken
+            long startTime = System.nanoTime();
+
             // Attempts to call a module with the given input
-            moduleProcessor.callModule(input);
+            while(!moduleProcessor.callModule(input) && System.nanoTime() - startTime < 10e9) {
+
+                // Appends inputs given within 10 seconds of the key phrase being spoken to the input
+                input += speechToText.getResults();
+            }
         }
     }
 }

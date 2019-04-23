@@ -11,6 +11,7 @@ public class ModuleRegistration {
     private Calendar calendar = new Calendar();
     private Weather weather = new Weather();
     private Time time = new Time();
+    private Alarm alarm = new Alarm();
 
     /**
      * Points moduleProcessor to the given moduleProcessor object reference
@@ -26,5 +27,6 @@ public class ModuleRegistration {
         moduleProcessor.registerModule(calendar, "calendar");
         moduleProcessor.registerModule(weather, "weather");
         moduleProcessor.registerModule(time, "time");
+        moduleProcessor.registerModule(alarm, "alarm");
     }
 }

@@ -43,6 +43,9 @@ dependencies {
 
     // Use Mary for text to speech
     compile group: 'de.dfki.mary', name: 'voice-cmu-slt-hsmm', version: '5.2'
+
+    // Use to parse json files efficently
+    implementation 'com.google.code.gson:gson:2.8.5'
 }
 
 // Define the main class for the application
