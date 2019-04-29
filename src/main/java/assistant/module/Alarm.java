@@ -23,6 +23,6 @@ public class Alarm extends Module {
     }
 
     public void response() {
-        JOptionPane.showMessageDialog(null, "BEEP BOOP! Your alarm is going off", "Alarm", 2);
+        JOptionPane.showMessageDialog(null, "BEEP BOP! Your alarm is going off", "Alarm", 2);
     }
 }
